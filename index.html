@@ -91,7 +91,7 @@
                             and making to positive impact on the lives of those in need.
                         </p>
                         <!-- modal section -->
-                        <section id="modal" class="hidden ">
+                        <!-- <section id="modal" class="hidden ">
                             <div class="shadow-xl rounded-lg text-center z-10 w-96 h-40 opacity-100">
                                 <h1 class="font-extrabold text-xl text-title">Congrates!</h1>
                                 <span>
@@ -102,11 +102,14 @@
                                 <button id="close-modal" class="btn">Close Confirmation</button>
                 
                             </div>
-                         </section>
+                         </section> -->
+                         <!-- modal 2 start -->
+                          <!-- Open the modal using ID.showModal() method -->
+
                         <input id="flood-input-field" class="w-full border border-1 px-3 py-3 rounded-md" type="text"
                             placeholder="Write Donation Amount">
                         <div>
-                            <button id="flood-btn" class=" btn bg-primary w-full mt-4 text-xl font-semibold text-title">Donate
+                            <button onclick="my_modal_1.showModal()" id="flood-btn" class=" btn bg-primary w-full mt-4 text-xl font-semibold text-title">Donate
                                 Now</button>
                         </div>
 
@@ -136,7 +139,7 @@
                             urgent need.
                         </p>
                         <!-- modal section2 -->
-                        <section id="modal-2" class="hidden ">
+                        <!-- <section id="modal-2" class="hidden ">
                             <div class="shadow-xl rounded-lg text-center z-10 w-96 h-40 opacity-100">
                                 <h1 class="font-extrabold text-xl text-title">Congrates!</h1>
                                 <span>
@@ -147,7 +150,7 @@
                                 <button id="close-modal-2" class="btn">Close Confirmation</button>
                 
                             </div>
-                         </section>
+                         </section> -->
                         <input id="relief-input-field" class="w-full border border-1 px-3 py-3 rounded-md" type="text"
                             placeholder="Write Donation Amount">
                         <div>
@@ -181,7 +184,7 @@
                             Please consider making a donation to support these brave individuals in their time of need.
                         </p>
                         <!-- modal section 3 -->
-                        <section id="modal-3" class="hidden ">
+                        <!-- <section id="modal-3" class="hidden ">
                             <div class="shadow-xl rounded-lg text-center z-10 w-96 h-40 opacity-100">
                                 <h1 class="font-extrabold text-xl text-title">Congrates!</h1>
                                 <span>
@@ -192,7 +195,7 @@
                                 <button id="close-modal-3" class="btn">Close Confirmation</button>
                 
                             </div>
-                         </section>
+                         </section> -->
                         <input id="quota-input-field" class="w-full border border-1 px-3 py-3 rounded-md" type="text"
                             placeholder="Write Donation Amount">
                         <div>
@@ -204,6 +207,24 @@
                 </div>
             </div>
         </section>
+
+        <!-- modal section start -->
+         
+ <section id="modal-section">
+    <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+          <h3 class="text-lg font-bold">Hello!</h3>
+          <p class="py-4">Press ESC key or click the button below to close</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+ </section>
+
 
         <!-- history part start-->
          <section class="hidden">

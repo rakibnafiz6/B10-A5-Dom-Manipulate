@@ -6,17 +6,21 @@
 document.getElementById('flood-btn')
     .addEventListener('click', function () {
         const floodInputField = getDonationInputField('flood-input-field');
-        if(isNaN(floodInputField) || floodInputField < 1){
+        if(isNaN(floodInputField) || floodInputField <= 0){
           alert('Invalid Donation Amount');
-        
+         
         }
+        
         else{
             const floodAmount = getDonationTextField('flood-donate-amount');
             document.getElementById('flood-donate-amount').innerText = floodInputField;
             const totalBalance = getDonationTextField('total-amount');
             const remainingAmount = totalBalance - floodInputField;
             document.getElementById('total-amount').innerText = remainingAmount;
-            document.getElementById('modal').classList.remove('hidden');
+            // document.getElementById('modal').classList.remove('hidden');
+            // document.getElementById('my_modal_1').classList.remove('hidden');
+            // document.getElementById('modal-section').classList.('hidden');
+            document.getElementById('modal-section').removeAttribute('my_modal_1');
         }
         
         
@@ -34,7 +38,7 @@ document.getElementById('flood-btn')
             const totalBalance = getDonationTextField('total-amount');
             const remainingAmount = totalBalance - floodReliefInputField;
             document.getElementById('total-amount').innerText = remainingAmount;
-            document.getElementById('modal-2').classList.remove('hidden');
+            document.getElementById('my_modal_1').classList.remove('hidden');
         }
 
  })
@@ -45,6 +49,7 @@ document.getElementById('flood-btn')
  const quotaInputField = getDonationInputField('quota-input-field');
  if(isNaN(quotaInputField) || quotaInputField < 1){
     alert('Invalid Donation Amount');
+    // document.getElementById('my_modal_1').classList.add('hidden');
  }
  else{
     const quotaAmount = getDonationTextField('quota-donate-amount');
@@ -52,24 +57,24 @@ document.getElementById('flood-btn')
  const totalBalance = getDonationTextField('total-amount');
  const remainingAmount = totalBalance - quotaInputField;
  document.getElementById('total-amount').innerText = remainingAmount;
- document.getElementById('modal-3').classList.remove('hidden');
+ document.getElementById('my_modal_1').classList.remove('hidden');
  }
  
  })
 
 // modal section
- document.getElementById('close-modal')
-    .addEventListener('click', function(){
-    const modal = getModalField('modal');
- })
- document.getElementById('close-modal-2')
-    .addEventListener('click', function(){
-   const modal2 = getModalField('modal-2');
- })
- document.getElementById('close-modal-3')
-    .addEventListener('click', function(){
-   const modal3 = getModalField('modal-3');
- })
+//  document.getElementById('close-modal')
+//     .addEventListener('click', function(){
+//     const modal = getModalField('modal');
+//  })
+//  document.getElementById('close-modal-2')
+//     .addEventListener('click', function(){
+//    const modal2 = getModalField('modal-2');
+//  })
+//  document.getElementById('close-modal-3')
+//     .addEventListener('click', function(){
+//    const modal3 = getModalField('modal-3');
+//  })
 
 //  blog btn----->
 
