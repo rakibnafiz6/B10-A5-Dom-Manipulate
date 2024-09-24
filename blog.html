@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#B4F461',
+                        title: '#111111',
+
+                    },
+                    fontFamily: {
+                        Lexend: 'Lexend'
+                    }
+
+
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div class="bg-[#f9f7f3] mb-12">
+        <nav class="w-11/12 mx-auto px-4 py-4">
+            <div class="navbar">
+                <div class="navbar-start">
+
+                    <a id="home-btn" class="btn bg-primary font-semibold text-xl">Home</a>
+                </div>
+                <div class="navbar-center hidden gap-2 lg:flex">
+                    
+                    <img src="assets/logo.png" alt="">
+                    <h1 class="font-semibold text-xl text-title">Donate Bangladesh</h1>
+                </div>
+                <div class="navbar-end gap-1">
+                    <img src="assets/coin.png" alt="">
+                    <a class="font-medium text-xl text-title opacity-70">
+                    <span id="total-amount">5500</span>BDT</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- faq section start -->
+    <section class="w-11/12 mx-auto mt-3">
+     <div class="flex mb-5">
+        <h1 class="font-black text-2xl">Important FAQ</h1>
+     <i class="fa-regular fa-circle-question"></i>
+     </div>
+     <!-- faq message start -->
+     <div class=" rounded-md collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
+        <div class="collapse-content"> 
+          <p>The Document Object Model is a programming interface for web documents.It represent the page so that programs can change the document structure, style, and content.</p>
+        </div>
+      </div>
+      <div class="rounded-md collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do you select an element from the dom?</div>
+        <div class="collapse-content">
+          <p>1.Using getElementById: The getElementById method allows you to select an element by its ID. 2.Using getElementsByClassName, 3.Using getElementByTagName, 4.Using querySelector and 5.Using querySelectorAll etc.</p>
+        </div>
+      </div>
+      <div class="rounded-md collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">What is event delegation in the context of the dom, and why it is useful?</div>
+        <div class="collapse-content">
+          <p>The process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated.It allows us to attach a single event listener for elements that exist now or in the future.</p>
+        </div>
+      </div>
+      <div class="rounded-md collapse collapse-arrow bg-base-200">
+        <input type="radio" name="my-accordion-2" />
+        <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the Dom?</div>
+        <div class="collapse-content">
+          <p>If you want to change other attributes like id, href, or src, you can use the setAttribute() method. The setAttribute() method accepts two arguments: The name of the attribute to set.The value of the attribute to set.</p>
+        </div>
+      </div>
+    </section>
+    <script src="js/blog.js"></script>
+   
+</body>
+</html>
