@@ -15,7 +15,7 @@ document.getElementById('flood-btn')
         const floodInputField = getDonationInputField('flood-input-field');
         if (isNaN(floodInputField) || floodInputField <= 0 || totalAmount < floodInputField) {
             alert('Invalid Donation Amount');
-
+        
         }
 
         else {
@@ -26,7 +26,11 @@ document.getElementById('flood-btn')
             document.getElementById('total-amount').innerText = remainingAmount;
             document.getElementById('modal').classList.remove('hidden');
         }
-
+       if(floodInputField <= 0 || isNaN(floodInputField)){
+            // alert('Invalid Donation Amount');
+            document.getElementById('history-container').classList.add('hidden');
+       }
+       else{
         const floodTitle = document.getElementById("flood-title").innerText;
         const div = document.createElement("div");
         div.className = "shadow-md py-10 px-10";
@@ -37,6 +41,8 @@ document.getElementById('flood-btn')
 `;
         const historyContainer = document.getElementById("history-container");
         historyContainer.insertBefore(div, historyContainer.firstChild);
+       }
+        
 
     });
 
