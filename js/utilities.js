@@ -14,8 +14,8 @@ function getDonationTextField(id){
 }
 
 
-// function getModalField(id){
-// const closeModal = document.getElementById(id).classList.add('hidden');
+function getModalField(id){
+const closeModal = document.getElementById(id).classList.add('hidden');
     
-//     return closeModal;
-// }
+    return closeModal;
+}
