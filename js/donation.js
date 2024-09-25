@@ -26,9 +26,10 @@ document.getElementById('flood-btn')
             document.getElementById('total-amount').innerText = remainingAmount;
             document.getElementById('modal').classList.remove('hidden');
         }
+
        if(floodInputField <= 0 || isNaN(floodInputField)){
-            // alert('Invalid Donation Amount');
-            document.getElementById('history-container').classList.add('hidden');
+            
+           
        }
        else{
         const floodTitle = document.getElementById("flood-title").innerText;
@@ -65,7 +66,11 @@ document.getElementById('flood-relief-btn')
             document.getElementById('modal-2').classList.remove('hidden');
         }
 
-        const reliefTitle = document.getElementById("relief-title").innerText;
+        if(floodReliefInputField <= 0 || isNaN(floodReliefInputField)){
+           
+        }
+        else{
+            const reliefTitle = document.getElementById("relief-title").innerText;
         const div = document.createElement("div");
         div.className = "shadow-md py-10 px-10";
         div.innerHTML = `
@@ -76,7 +81,10 @@ document.getElementById('flood-relief-btn')
         const historyContainer = document.getElementById("history-container");
         historyContainer.insertBefore(div, historyContainer.firstChild);
 
-    });
+ }
+
+        
+ });
 
 
 
@@ -97,16 +105,23 @@ document.getElementById('quota-btn')
             document.getElementById('modal-3').classList.remove('hidden');
         }
 
-        const quotaTitle = document.getElementById("quota-title").innerText;
-        const div = document.createElement("div");
-        div.className = "shadow-md py-10 px-10";
-        div.innerHTML = `
-<h4 class="font-bold text-xl">${quotaInputField} Taka is ${quotaTitle}</h4>
-<p class="font-medium text-gray-500 text-base">Date:${new Date().toLocaleDateString()}</p>
+        if(quotaInputField <= 0 || isNaN(quotaInputField)){
+                
+        }
+        else{
+            const quotaTitle = document.getElementById("quota-title").innerText;
+            const div = document.createElement("div");
+            div.className = "shadow-md py-10 px-10";
+            div.innerHTML = `
+    <h4 class="font-bold text-xl">${quotaInputField} Taka is ${quotaTitle}</h4>
+    <p class="font-medium text-gray-500 text-base">Date:${new Date().toLocaleDateString()}</p>
+    
+    `;
+            const historyContainer = document.getElementById("history-container");
+            historyContainer.insertBefore(div, historyContainer.firstChild);
+        }
 
-`;
-        const historyContainer = document.getElementById("history-container");
-        historyContainer.insertBefore(div, historyContainer.firstChild);
+        
 
     });
 
