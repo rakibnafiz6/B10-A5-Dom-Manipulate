@@ -27,7 +27,7 @@ document.getElementById('flood-btn')
             document.getElementById('modal').classList.remove('hidden');
         }
 
-       if(floodInputField <= 0 || isNaN(floodInputField)){
+       if(floodInputField <= 0 || isNaN(floodInputField) || totalAmount < floodInputField){
             
            
        }
@@ -66,7 +66,7 @@ document.getElementById('flood-relief-btn')
             document.getElementById('modal-2').classList.remove('hidden');
         }
 
-        if(floodReliefInputField <= 0 || isNaN(floodReliefInputField)){
+        if(floodReliefInputField <= 0 || isNaN(floodReliefInputField) || totalAmount < floodReliefInputField){
            
         }
         else{
