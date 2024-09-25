@@ -105,7 +105,7 @@ document.getElementById('quota-btn')
             document.getElementById('modal-3').classList.remove('hidden');
         }
 
-        if(quotaInputField <= 0 || isNaN(quotaInputField)){
+        if(quotaInputField <= 0 || isNaN(quotaInputField) || totalAmount < quotaInputField){
                 
         }
         else{
